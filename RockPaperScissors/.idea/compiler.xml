@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="RockPaperScissors" target="1.5" />
+      <module name="RockPaperScissors" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
