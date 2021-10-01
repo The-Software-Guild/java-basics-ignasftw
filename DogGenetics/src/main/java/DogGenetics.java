@@ -3,40 +3,60 @@ import java.util.Scanner;
 
 public class DogGenetics {
     public static void main(String[] args) {
+        //Declare a scanner which will be used for input
         Scanner reader = new Scanner(System.in);
+        //Declare a String which will store petName
         String petName;
-        int[] _perc;
+        //Declare an int array which will store 5 random percentage values which sums to 100
+        int[] perc;
+        //Declare a String to store dog breeds
+        String[] breeds = {"St. Bernard", "Chihuahua","Dramatic RedNosed Asian Pug","Common Cur","King Doberman"};
 
-        //Input string
+        //Print the name of the software
         System.out.println("--- exec-maven-plugin:1.2.1:exec (default-cli) @ Unit1 ---");
+        //Print a question about the dog's name
         System.out.print("What is your dog's name?");
+        //Read the pet's name
         petName = reader.nextLine();
+        //Print introduction about fake information including the pet's name
         System.out.print("Well then, I have this highly reliable report on " + petName);
         System.out.print("'s prestigious background right here.\n\n");
         System.out.println(petName + " is:\n");
 
-        _perc = PercentageGenerator();
-        System.out.println(
-                _perc[0]+ "% St. Bernard\n" +
-                _perc[1]+ "% Chihuahua\n" +
-                _perc[2]+ "% Dramatic RedNosed Asian Pug\n" +
-                _perc[3]+ "% Common Cur\n" +
-                _perc[4]+ "% King Doberman"
-        );
+        //Call a method which will return an int array with 5 random percentage values
+        perc = PercentageGenerator(breeds.length);
 
+        //FOR all breeds
+        for (int i=0;i< breeds.length;i++)
+        {
+            //Print fake information about percentages with breed names
+            System.out.println(perc[i]+"% "+breeds[i]);
+        }
         System.out.println("\nWow, that's QUITE the dog!");
     }
-    static int[] PercentageGenerator()
+
+    /**Uses random to generate 5 random percentage values that add to 100
+     * @param numberCount number of random numbers should be generated
+     * @return an array containing 5 random values which add to 100
+     * */
+    static int[] PercentageGenerator(int numberCount)
     {
+        //Declare random which will generate numbers
         Random random = new Random();
-        int[] perc = new int[5];
+        //Declare an array which will return random values
+        int[] perc = new int[numberCount];
+        //Declare an int which is the total sum
         int totalPercentage = 100;
-        for (int i=0;i<4;i++)
+        //FOR all-1 values
+        for (int i=0;i<perc.length;i++)
         {
+            //Generate random value between 0 and 99
             perc[i] = random.nextInt(totalPercentage);
+            //Subtract that random number from total percentage
             totalPercentage -= perc[i];
         }
-        perc[4] = totalPercentage;
+        //Assign the remainder of the total percentage
+        perc[perc.length-1] = totalPercentage;
         return perc;
     }
 }
