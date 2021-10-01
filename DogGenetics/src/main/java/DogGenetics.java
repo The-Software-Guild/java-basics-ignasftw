@@ -24,7 +24,7 @@ public class DogGenetics {
         System.out.println(petName + " is:\n");
 
         //Call a method which will return an int array with 5 random percentage values
-        perc = PercentageGenerator(breeds.length);
+        perc = percentageGenerator(breeds.length);
 
         //FOR all breeds
         for (int i=0;i< breeds.length;i++)
@@ -39,7 +39,7 @@ public class DogGenetics {
      * @param numberCount number of random numbers should be generated
      * @return an array containing 5 random values which add to 100
      * */
-    static int[] PercentageGenerator(int numberCount)
+    static int[] percentageGenerator(int numberCount)
     {
         //Declare random which will generate numbers
         Random random = new Random();
