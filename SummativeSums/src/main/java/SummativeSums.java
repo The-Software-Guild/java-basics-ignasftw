@@ -15,7 +15,7 @@ public class SummativeSums {
         for (int i=0;i<array.length;i++)
         {
             //Print out the sum answer
-            System.out.println("#"+(i+1)+" Array Sum: " + ArraySum(array[i]));
+            System.out.println("#"+(i+1)+" Array Sum: " + arraySum(array[i]));
         }
     }
 
@@ -24,7 +24,7 @@ public class SummativeSums {
      * @param  array an array including all numbers
      * @return      int which is the sum of an array
      */
-    static int ArraySum(int[] array){
+    static int arraySum(int[] array){
         //Set the initial sum to zero
         int sum=0;
         //FOR all int in the array
