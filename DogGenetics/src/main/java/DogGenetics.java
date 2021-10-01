@@ -1,6 +1,9 @@
 import java.util.Random;
 import java.util.Scanner;
-
+/**
+ * @author Ignotas Burba
+ * @version 01.10.2021
+ */
 public class DogGenetics {
     public static void main(String[] args) {
         //Declare a scanner which will be used for input
