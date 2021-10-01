@@ -1,4 +1,8 @@
 import java.util.Scanner;
+/**
+ * @author Ignotas Burba
+ * @version 01.10.2021
+ */
 
 public class HealthyHearts {
 
